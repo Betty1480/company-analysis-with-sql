@@ -8,19 +8,24 @@
 --information from the dataset and present meaningful insights to support decision-making processes 
 --within the organization.
 --Here is the list of 30 Questions:
+
 --1. Retrieve the first name and last name of all employees.
 SELECT first_name, last_name
 FROM [company techassignment].[dbo].[Employees]
+
 --2. Find the department numbers and names.
 SELECT TOP (1000) [dep_no]
       ,[dep_name]
   FROM [company techassignment].[dbo].[department]
+  
 --3. Get the total number of employees.
 SELECT COUNT(DISTINCT emp_no)
 FROM [company techassignment].[dbo].[Employees]
+
 --4. Find the average salary of all employees.
 SELECT  AVG (salary) AS AVG_SALARY
 FROM [company techassignment].[dbo].[salaries]
+
 --5. Retrieve the birth date and hire date of employee with emp_no 10003.
 SELECT birth_date, hire_date
 FROM  [company techassignment].[dbo].[Employees]
@@ -32,6 +37,7 @@ FROM [company techassignment].[dbo].[Employees]
 
 SELECT CAST(birth_date AS date ) AS formatted_date
 FROM [company techassignment].[dbo].[Employees]   
+
 --6. Find the titles of all employees.
 SELECT emp_no,title
 FROM [company techassignment].[dbo].[employee_titles]
